@@ -25,14 +25,16 @@ document.querySelector("#form-one").addEventListener("submit", getFactNumber);
 function getFactDate(e) {
   e.preventDefault();
   const number = inputDate.value;
+  if (inputDate.value != "") {
   fetch("http://numbersapi.com/" + number + "/date")
     .then(res => res.text())
     .then(data => {
-      if (inputDate.value != "") {
+      
         factDate.style.display = "block";
         factTextDate.innerText = data;
-      }
+      
     })
+	
     .catch(error => {
       errDate.style.display = "block";
       errDate.innerHTML = `
@@ -43,19 +45,22 @@ function getFactDate(e) {
         .querySelector(".closeDate")
         .addEventListener("click", () => (errDate.style.display = "none"));
     });
+	}
 }
 
 function getFactYear(e) {
   e.preventDefault();
   const number = inputYear.value;
+  if (inputYear.value != "") {
   fetch("http://numbersapi.com/" + number + "/year")
     .then(res => res.text())
     .then(data => {
-      if (inputYear.value != "") {
+      
         factYear.style.display = "block";
         factTextYear.innerText = data;
-      }
+      
     })
+	
     .catch(error => {
       errYear.style.display = "block";
       errYear.innerHTML = `
@@ -66,19 +71,22 @@ function getFactYear(e) {
         .querySelector(".closeYear")
         .addEventListener("click", () => (errYear.style.display = "none"));
     });
+	}
 }
 
 function getFactNumber(e) {
   e.preventDefault();
   const number = inputNumber.value;
+  if (inputNumber.value != "") {
   fetch("http://numbersapi.com/" + number)
     .then(res => res.text())
     .then(data => {
-      if (inputNumber.value != "") {
+      
         factNumber.style.display = "block";
         factTextNumber.innerText = data;
-      }
+     
     })
+	 
     .catch(error => {
       errNumber.style.display = "block";
       errNumber.innerHTML = `
@@ -89,6 +97,7 @@ function getFactNumber(e) {
         .querySelector(".closeNumber")
         .addEventListener("click", () => (errNumber.style.display = "none"));
     });
+	}
 }
 
 // function getFactAjax() {
