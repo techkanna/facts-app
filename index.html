@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Facts about numbers, years and dates</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrap-one">
+        <div class="head">
+          <h1>NUMBER FACTS</h1>
+          <p>Enter any number and get randam facts about the number</p>
+          <form id="form-one" class="form">
+            <input
+              type="number"
+              placeholder="Enter any number"
+              class="number"
+            />
+            <input type="submit" value="check" />
+          </form>
+        </div>
+        <div class="fact fact-one">
+          <h3>Number fact</h3>
+          <p id="fact-text-one"></p>
+        </div>
+        <div class="err err-one"></div>
+      </div>
+
+      <div class="wrap-two">
+        <div class="head">
+          <h1>YEAR FACTS</h1>
+          <p>Enter any year and get randam facts about the Year</p>
+          <form id="form-two" class="form">
+            <input type="number" placeholder="Enter any year" class="year" />
+            <input type="submit" value="check" />
+          </form>
+        </div>
+
+        <div class="fact fact-two">
+          <h3>YEAR Fact</h3>
+          <p id="fact-text-two"></p>
+        </div>
+        <div class="err err-two"></div>
+      </div>
+
+      <div class="wrap-three">
+        <div class="head">
+          <h1>DATE FACTS</h1>
+          <p>Enter any date and get randam facts about the date.</p>
+          <p>
+            please ensure your date is in this formate " mm/dd ". for example
+            02/14 is february fourteen.
+          </p>
+          <form id="form-three" class="form">
+            <input type="text" placeholder="Enter any date.." class="date" />
+            <input type="submit" value="check" />
+          </form>
+        </div>
+
+        <div class="fact fact-three">
+          <h3>DATE Fact</h3>
+          <p id="fact-text-three"></p>
+        </div>
+        <div class="err err-three"></div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
